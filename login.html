@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Iniciar Sesión</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?
+    family-Montserrat:ital,wght@0,500;0,700;1,400&dtsplay=swap"rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <h1 class="text-center text-primary">Iniciar Sesión</h1>
+        <p class="text-center">Ingresa los datos con los que te has registrado para
+            poder continuar.</p>
+
+        <form>
+            <input type="email" name="email" placeholder="Correo electrónico">
+            <div class="input-group">
+                
+                <input type="password" name="password" placeholder="Contraseña" value="FakePSW" id="myInput">
+                
+
+                <!-- 
+                EXCEPCION DE CONTRASEÑA
+                    <input type="password" name="password" placeholder="Contraseña" value="FakePSW" id="myInput" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="Debe tener 1 letra minuscula, 1 mayuscula, 1 numero y mínimo 8 caracteres." required>
+                -->
+
+                <input type="checkbox" onclick="myFunction()">Mostrar Contraseña
+                <script>
+                    function myFunction() {
+                      var x = document.getElementById("myInput");
+                      if (x.type === "password") {
+                        x.type = "text";
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+                    </script>
+                
+            </div>
+            <label>
+                <input type="checkbox" name="remember"> Recordar mis datos
+            </label>
+
+            <button type="submit" class="btn btn-primary">INICIAR SESION</button>
+
+            <div class="text-center">
+                <small><a href="#">¿Olvidaste tu contraseña?</a></small>
+            </div>
+        </form>
+
+        <div class="divider">0</div>
+            <a href="#" class="btn btn-google">
+            <span class= iconifv" data-intine="false" data-icon="arommet:icons:google"></span>
+            Iniciar sesión con Google
+            </a>
+            <a href="#" class="btn btn-facebook">
+            <span class="iconify" data-inline="false" data-icon="brandico:facebook"></span>
+            Iniciar sesión con Facebook
+            </a>
+
+        <div class="text-center">
+        <small>¿Aún no tienes una cuenta? <a href="#"> Registrate </a></small>
+        </div>
+    </div>
+
+    
+</body>
+</html>
